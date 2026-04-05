@@ -15,14 +15,9 @@ public class Worker {
 		baseSalary = bs; 
 		department = d; 
 	}
-
+	
 	@Override
 	public String toString() {
-		return "Worker [name=" + name + ", level=" + level + ", baseSalary=" + baseSalary + ", department=" + department
-				+ "]";
+		return String.format("\nName: %s\nDepartment: %s", this.name, this.department.toString());
 	}
-	
-	
-	
-	
 }
