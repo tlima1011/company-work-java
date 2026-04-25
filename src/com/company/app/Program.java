@@ -57,11 +57,11 @@ public class Program {
 		}	
 		
 		System.out.print("Enter month and year to calculate income (MM/YYYY): "); 
-		String [] my = ler.nextLine().split("/"); 
-		int month = Integer.parseInt(my[0]); 
-		int year = Integer.parseInt(my[1]);
+		String my = ler.nextLine(); 
+		int month = Integer.parseInt(my.substring(0, 2)); 
+		int year = Integer.parseInt(my.substring(3));
 		double income = wk.income(year, month); 
-				
+		
 		System.out.println(wk);
 		System.out.printf("Income for %d/%d: %.2f", month, year, income);
 		//Income for 08/2018: 3000.00

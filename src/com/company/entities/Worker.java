@@ -30,7 +30,7 @@ public class Worker {
 	public Double income(int y, int m) { 
 		double sum = baseSalary; 
 		for (HourContract hc : contracts) {
-			if (hc.getDate().getYear() == y && hc.getDate().getDayOfMonth() == m)
+			if (hc.getDate().getYear() == y && hc.getDate().getMonthValue() == m)
 			{
 			    sum += hc.totalValue();
 			}
