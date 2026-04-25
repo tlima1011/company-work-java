@@ -40,6 +40,11 @@ public class Worker {
 	
 	@Override
 	public String toString() {
-		return String.format("\nName: %s\nDepartment: %s", this.name, this.department.toString());
+		
+		StringBuilder sb = new StringBuilder(); 
+		sb.append("\nName: " + this.name +"\n"); 
+		sb.append("Department: " + this.department.getName() + "\n"); 
+		return sb.toString();
+		//return String.format("\nName: %s\nDepartment: %s", this.name, this.department.toString());
 	}
 }
