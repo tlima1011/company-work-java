@@ -2,9 +2,9 @@ package com.company.entities.enums;
 
 public enum WorkLevel {
 	
-	JUNIOR(1),
-	MID_LEVEL(2),
-	SENIOR(3); 
+	Junior(1),
+	MidLevel(2),
+	Senior(3); 
 	
 	private final int code; 
 	
