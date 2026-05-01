@@ -26,9 +26,9 @@ public class Program {
 		String Name = ler.nextLine(); 
 		//Name: Alex
 		System.out.print("Level (Junior/MidLevel/Senior): ");
-		String Level = ler.nextLine(); 
+		//String Level = ler.nextLine(); 
 		//MidLevel
-		WorkLevel workLevel = WorkLevel.valueOf(Level);
+		WorkLevel workLevel = WorkLevel.valueOf(ler.nextLine());
 		System.out.print("Base salary: ");
 		Double baseSalary = ler.nextDouble(); 
 		Worker wk = new Worker(Name, workLevel, baseSalary, department);
