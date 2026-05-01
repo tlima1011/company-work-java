@@ -8,6 +8,7 @@ import java.util.Scanner;
 import com.company.entities.Department;
 import com.company.entities.HourContract;
 import com.company.entities.Worker;
+import com.company.entities.enums.Section;
 import com.company.entities.enums.WorkLevel;
 
 public class Program {
@@ -30,8 +31,11 @@ public class Program {
 		//MidLevel
 		WorkLevel workLevel = WorkLevel.valueOf(ler.nextLine());
 		System.out.print("Base salary: ");
-		Double baseSalary = ler.nextDouble(); 
-		Worker wk = new Worker(Name, workLevel, baseSalary, department);
+		Double baseSalary = ler.nextDouble();
+		ler.nextLine();
+		System.out.print("Section: ");
+		Section section = Section.valueOf(ler.nextLine()); 
+		Worker wk = new Worker(Name, workLevel, baseSalary, department, section);
 		//String n, WorkLevel l, Double bs, Department d
 		//1200.00
 		System.out.print("How many contracts to this worker? "); 

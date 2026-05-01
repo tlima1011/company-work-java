@@ -2,6 +2,7 @@ package com.company.entities;
 
 import java.util.ArrayList;
 
+import com.company.entities.enums.Section;
 import com.company.entities.enums.WorkLevel;
 
 public class Worker {
@@ -10,6 +11,7 @@ public class Worker {
 	private WorkLevel level; 
 	private Double baseSalary; 
 	private Department department; 
+	private Section Section; 
 	private ArrayList<HourContract> contracts = new ArrayList<>(); 
 	
 	public Worker(String n, WorkLevel l, Double bs, Department d) {
@@ -18,6 +20,12 @@ public class Worker {
 		baseSalary = bs; 
 		department = d; 
 	}
+	
+	public Worker(String n, WorkLevel l, Double bs, Department d, Section s) {
+		this(n, l, bs, d); 
+		Section = s;
+	}
+	
 	
 	public void addContract(HourContract contract) {
 		contracts.add(contract); 
@@ -43,7 +51,8 @@ public class Worker {
 		
 		StringBuilder sb = new StringBuilder(); 
 		sb.append("\nName: " + this.name +"\n"); 
-		sb.append("Department: " + this.department.getName() + "\n"); 
+		sb.append("Department: " + this.department.getName() + "\n");
+		sb.append("Section: " + this.Section); 
 		return sb.toString();
 		//return String.format("\nName: %s\nDepartment: %s", this.name, this.department.toString());
 	}
